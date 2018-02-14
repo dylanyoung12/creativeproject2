@@ -1,4 +1,47 @@
 
 body {
-  background-color: rgb(98, 212, 37);
+  margin: 5px;
+  padding: 5px;
+}
+
+body.dancing {
+  animation-name: colorchange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorchange {
+  0%   {background-color: rgb(71, 203, 43);}
+  25%  {background-color: rgb(47, 143, 217);}
+  50%  {background-color: rgb(71, 203, 43);}
+  75%  {background-color: rgb(255, 103, 27);}
+  100% {background-color: rgb(71, 203, 43);}
+}
+
+
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+#danceFloor {
+  text-align: center;
+  margin-bottom: 20vw;
+}
+
+#doggo {
+  display: none;
+  position: relative;
+  width: 40%;
+  border-radius: 5px;
+  animation-name: rock;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rock {
+  0% {transform: rotate(7deg);}
+  50% {transform: rotate(-7deg);}
+  100% {transform: rotate(7deg);}
 }

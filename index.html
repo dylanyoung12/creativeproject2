@@ -2,22 +2,60 @@
 <html>
 <head>
   <title>Dog Disco</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="sylesheet" href="styles.css">
+  <link rel="icon" href="/animal-paw-print.png">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--- My CSS -->
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
-<body>
+<body class="mt-5">
 
+  <div class="container">
+    <h1 class="text-center">Dog Disco!!!</h1>
+    <br>
+  </div>
 
+  <div class="container" id="search">
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="dogBreed">Enter a breed of dog: </label>
+          <input id="dogBreed" type="text" class="form-control" placeholder='e.g. "Retreiver"'>
+        </div>
+        <div class="form-group">
+          <label for="subBreed">(Optional) Enter a sub-breed: </label>
+          <input id="subBreed" type="text" class="form-control" placeholder='e.g. "Golden"'>
+        </div>
+        <button id="breedSubmit" type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+    <br><br>
 
+    <div class="container">
+      <p>Or,&emsp;<button id="randomBreed" class="btn">Choose a Random Breed</button></p>
+    </div>
+  </div>
 
+  <br><br>
+  <div id="danceFloor" class="container">
+    <img id="doggo" src="">
+  </div>
 
+  <br><br>
+  <footer class="Page-footer text-center">
+    <hr>
+    <p>Repository: <a id="link" href="https://github.com/dylanyoung12/creativeproject2">https://github.com/dylanyoung12/creativeproject2</a></p>
+  </footer>
+
+  <!--- Javascript for Bootstrap and script.jss -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script text="type/javascript" src="/script.js">
-  </script>
+  <script text="type/javascript" src="/script.js"></script>
 </body>
 </html>
