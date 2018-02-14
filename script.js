@@ -51,8 +51,8 @@ $(document).ready(function() {
   //console.log("ready");
   $("#breedSubmit").click(function(e) {
     e.preventDefault();
-    var breed = $("#dogBreed").val().toLowerCase();
-    var subBreed = $("#subBreed").val().toLowerCase();
+    var breed = $("#dogBreed").val().toLowerCase().replace(/\s/g, '');
+    var subBreed = $("#subBreed").val().toLowerCase().replace(/\s/g, '');
     var apiurl = 'https://dog.ceo/api/breed/' + breed;
     if (subBreed !== "")
     apiurl += '/' + subBreed;

@@ -35,6 +35,7 @@ h1 {
   position: relative;
   width: 40%;
   border-radius: 5px;
+  box-shadow: 5px 5px 15px black;
   animation-name: rock;
   animation-duration: 1.0714s;
   animation-iteration-count: infinite;
