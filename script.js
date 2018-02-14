@@ -1,7 +1,6 @@
 
 var doggo = document.querySelector("#doggo");
 var danceFloor = document.querySelector("#danceFloor");
-var music = document.querySelector("#music")
 var dancing = false;
 
 
@@ -24,9 +23,7 @@ var danceTime = function() {
   //colors
   document.body.classList.add("dancing");
   //music
-  music.play();
-  music.src = "Shake_Shake_Shake.mp3";
-  music.play();
+  document.querySelector("#music").play();
 }
 
 // Random Dog Breed
