@@ -25,7 +25,7 @@ var danceTime = function() {
   //music
   var music = document.createElement("audio");
   var song = document.createElement("source");
-  song.setAttribute("src", "Shake_ Shake_ Shake.mp3");
+  song.setAttribute("src", "Shake_Shake_Shake.mp3");
   song.setAttribute("type", "audio/mpeg");
   music.appendChild(song);
   document.body.appendChild(music);
