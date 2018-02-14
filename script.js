@@ -1,6 +1,7 @@
 
 var doggo = document.querySelector("#doggo");
 var danceFloor = document.querySelector("#danceFloor");
+var music = document.querySelector("#music")
 var dancing = false;
 
 
@@ -23,12 +24,8 @@ var danceTime = function() {
   //colors
   document.body.classList.add("dancing");
   //music
-  var music = document.createElement("audio");
-  var song = document.createElement("source");
-  song.setAttribute("src", "Shake_Shake_Shake.mp3");
-  song.setAttribute("type", "audio/mpeg");
-  music.appendChild(song);
-  document.body.appendChild(music);
+  music.play();
+  music.src = "Shake_Shake_Shake.mp3";
   music.play();
 }
 
