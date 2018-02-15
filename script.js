@@ -15,14 +15,14 @@ var getDoggo = function(sub) {
   subBreedsList.childNodes.forEach(function(e) {
     e.classList.remove("active");
   });
-  console.log(sub);
   var myurl = 'https://dog.ceo/api/breed/' + breed;
   if (sub !== null) {
     sub.classList.add("active");
     var name = sub.textContent;
     if (name !== "Ibizan") {
-      name.toLowerCase().replace(/\s/g, '')
+      name = name.toLowerCase().replace(/\s/g, '');
     }
+    console.log(name);
     myurl += '/' + name;
   }
   myurl += '/images/random';
@@ -92,6 +92,7 @@ $(document).ready(function() {
   $("#breedSubmit").click(function(e) {
     e.preventDefault();
     breed = $("#dogBreed").val().toLowerCase().replace(/\s/g, '');
+    console.log(breed);
     var apiurl = 'https://dog.ceo/api/breed/' + breed;
     apiurl += '/list';
     $.ajax({
