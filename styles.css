@@ -24,6 +24,19 @@ h1 {
   font-weight: bold;
 }
 
+.subBreeds {
+  padding-top: 25px;
+}
+
+.subBreeds p {
+  display: none;
+}
+
+.subBreeds li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
 #danceFloor {
   text-align: center;
