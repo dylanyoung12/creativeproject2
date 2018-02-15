@@ -10,11 +10,15 @@ var capitalizeFirstLetter = function(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+
 var getDoggo = function(name) {
   console.log(name);
   var myurl = 'https://dog.ceo/api/breed/' + breed;
   if (name !== "") {
-    myurl += '/' + name.toLowerCase().replace(/\s/g, '');
+    if (name !== "Ibizan") {
+      name.toLowerCase().replace(/\s/g, '')
+    }
+    myurl += '/' + name;
   }
   myurl += '/images/random';
   $.ajax({
@@ -28,6 +32,7 @@ var getDoggo = function(name) {
     }
   });
 }
+
 
 var danceTime = function() {
   dancing = true;
@@ -51,6 +56,7 @@ var danceTime = function() {
   //music
   document.querySelector("#music").play();
 }
+
 
 // Random Dog Breed
 $(document).ready(function() {
