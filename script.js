@@ -11,10 +11,15 @@ var capitalizeFirstLetter = function(string) {
 };
 
 
-var getDoggo = function(name) {
-  console.log(name);
+var getDoggo = function(sub) {
+  subBreedsList.childNodes.forEach(function(e) {
+    e.classList.remove("active");
+  });
+  console.log(sub);
   var myurl = 'https://dog.ceo/api/breed/' + breed;
-  if (name !== "") {
+  if (sub !== null) {
+    sub.classList.add("active");
+    var name = sub.textContent;
     if (name !== "Ibizan") {
       name.toLowerCase().replace(/\s/g, '')
     }
@@ -110,14 +115,14 @@ $(document).ready(function() {
               var li = document.createElement("li");
               li.textContent = capitalizeFirstLetter(name);
               li.classList.add("list-group-item");
-              li.setAttribute("onclick", "getDoggo(this.textContent)");
+              li.setAttribute("onclick", "getDoggo(this)");
               subBreedsList.appendChild(li);
             });
           }
           // Dog has no sub-breeds
           else {
             document.querySelector("#subText").style.display = "none";
-            getDoggo("");
+            getDoggo(null);
           }
         }
       },
