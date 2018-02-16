@@ -10,6 +10,13 @@ var capitalizeFirstLetter = function(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+var clearList = function() {
+  while (subBreedsList.firstChild) {
+    subBreedsList.removeChild(subBreedsList.firstChild);
+  }
+  document.querySelector("#subText").style.display = "none";
+}
+
 
 var getDoggo = function(sub) {
   subBreedsList.childNodes.forEach(function(e) {
@@ -67,16 +74,13 @@ var danceTime = function() {
 $(document).ready(function() {
   $("#randomBreed").click(function(e) {
     e.preventDefault();
+    clearList();
     var apiurl = 'https://dog.ceo/api/breeds/image/random';
     $.ajax({
       url : apiurl,
       datatype : "json",
       success : function(json) {
         console.log(json);
-        while (subBreedsList.firstChild) {
-          subBreedsList.removeChild(subBreedsList.firstChild);
-        }
-        document.querySelector("#subText").style.display = "none";
         var result = json.message;
         $("#doggo").attr("src", result);
         if (!dancing) danceTime();
@@ -99,14 +103,12 @@ $(document).ready(function() {
       url : apiurl,
       datatype : "json",
       success : function(json) {
+        clearList();
         if (json.code == 404) {
           alert("Dog breed not found - try again")
         }
         else {
           console.log(json);
-          while (subBreedsList.firstChild) {
-            subBreedsList.removeChild(subBreedsList.firstChild);
-          }
           // Dog has sub-breeds
           if (json.message.length !== 0) {
             document.querySelector("#subText").style.display = "block";
@@ -128,7 +130,8 @@ $(document).ready(function() {
         }
       },
       error : function() {
-        alert("Dog breed not found - try again")
+        clearList();
+        alert("Dog breed not found - try again");
       }
     });
   });
